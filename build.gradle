@@ -1,0 +1,27 @@
+apply plugin: 'groovy'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = "adamatti.Main"
+
+idea {
+	module {
+		downloadJavadoc = false
+		downloadSources = false
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.slf4j:slf4j-api:1.7.21'
+	compile 'ch.qos.logback:logback-classic:1.1.7'
+
+	compile 'org.codehaus.groovy:groovy-all:2.4.6'
+	compile 'org.codehaus.gpars:gpars:1.2.1'
+
+	//compile 'org.neo4j:neo4j:3.0.0'
+	compile  'org.neo4j.driver:neo4j-java-driver:1.0.0-RC2'
+}
